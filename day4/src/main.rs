@@ -1,4 +1,3 @@
-use std::iter;
 use std::str::FromStr;
 
 fn main() {
@@ -32,8 +31,6 @@ fn part_1(digits: &Vec<u32>) -> bool {
 
 fn part_2(digits: &Vec<u32>) -> bool {
     let mut double_without_triple = false;
-
-    let mut last_number: u32 = digits[0];
     let mut last_number_count = 1;
 
     for i in 1..digits.len() {
@@ -50,7 +47,6 @@ fn part_2(digits: &Vec<u32>) -> bool {
             if last_number_count == 2 {
                 double_without_triple = true;
             }
-            last_number = digits[i];
             last_number_count = 1;
         }
     }
