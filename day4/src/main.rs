@@ -59,13 +59,13 @@ fn parse_range(range: &str) -> std::ops::RangeInclusive<u32> {
     it.next().unwrap()..=it.next().unwrap()
 }
 
-fn get_digits(number: u32) -> Vec<u32> {
+fn get_digits(n: u32) -> Vec<u32> {
     vec![
-        (number / 100000) % 10,
-        (number / 10000) % 10,
-        (number / 1000) % 10,
-        (number / 100) % 10,
-        (number / 10) % 10,
-        number % 10,
+        (n / 100000) % 10,
+        (n / 10000) % 10,
+        (n / 1000) % 10,
+        (n / 100) % 10,
+        (n / 10) % 10,
+        n % 10,
     ]
 }
